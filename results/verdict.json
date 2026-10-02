@@ -1,0 +1,49 @@
+{
+  "tool": "preregister@1",
+  "claimsHash": "sha256:8ec94467bc0fa79575a90a31b3a8e221949b5dd045d3b86b8dffc6585455bc65",
+  "sealedAt": "2026-10-02T22:39:44.623Z",
+  "verdicts": [
+    {
+      "claimId": "P1",
+      "metric": "P1.gaMinusQtable",
+      "op": "gte",
+      "threshold": 0,
+      "verdict": "FAIL",
+      "measured": -13.64,
+      "reason": "FAIL means even a GA fitted directly on the eval seeds could not beat the 64-state tabular learner there — the strongest possible indictment of this GA parameterization; PASS must be read against the disclosed fitness leak (the GA saw these seeds during evolution, the q-table never did)."
+    },
+    {
+      "claimId": "P2",
+      "metric": "P2.banditMinusHunter",
+      "op": "gte",
+      "threshold": 0,
+      "verdict": "PASS",
+      "measured": 2.5
+    },
+    {
+      "claimId": "P3",
+      "metric": "P3.tinynnBeatsRandomSeeds",
+      "op": "gte",
+      "threshold": 7,
+      "verdict": "FAIL",
+      "measured": 2,
+      "reason": "FAIL means the cloned MLP does not reliably clear a uniform random walker — BC from 8 trajectories did not transfer to a policy."
+    },
+    {
+      "claimId": "P4",
+      "metric": "P4.memoryWalkerWins",
+      "op": "gte",
+      "threshold": 3,
+      "verdict": "FAIL",
+      "measured": 0,
+      "reason": "FAIL means exploration memory alone does not reach the exit within 200 turns on these maps often enough, and the 200-pt win bonus stays marginal for scripted agents; the exact win count is receipted either way."
+    }
+  ],
+  "counts": {
+    "PASS": 1,
+    "FAIL": 3,
+    "VACUOUS": 0,
+    "PENDING": 0
+  },
+  "law": "pure function of (claims, seal, results) — the carrying commit is the timestamp; FAIL and VACUOUS are honest receipts, never silenced"
+}
