@@ -88,10 +88,10 @@ const p3 = tinynn.filter(r => r.score > refBySeed[r.seed]).length;
 const mw = results.filter(r => r.entry.name === 'memory-walker');
 
 const metrics = {
-  'P1.gaMinusQtable': +(get('ga-params').mean - get('q-table').mean).toFixed(4),
-  'P2.banditMinusHunter': +(get('bandit').mean - get('hunter').mean).toFixed(4),
-  'P3.tinynnBeatsRandomSeeds': p3,
-  'P4.memoryWalkerWins': mw.filter(r => r.won).length,
+  P1: { gaMinusQtable: +(get('ga-params').mean - get('q-table').mean).toFixed(4) },
+  P2: { banditMinusHunter: +(get('bandit').mean - get('hunter').mean).toFixed(4) },
+  P3: { tinynnBeatsRandomSeeds: p3 },
+  P4: { memoryWalkerWins: mw.filter(r => r.won).length },
 };
 const evidence = {
   ranking: stats,

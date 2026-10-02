@@ -30,7 +30,7 @@
    "tools/train-ga.mjs": "29073ec2fa4c36356cfab8c058181c9b6c753c5f0e6adaa3abbbad06b1300262",
    "tools/run-ladder.mjs": "75f92471ecaea865dd5dad549337bf27422bb5a1e90ca220122e973182340cc7",
    "tools/preregister.mjs": "4a7c57980e8d5b7544ae09ff9156f96802af9e549482df95da34772f36890138",
-   "tournament.mjs": "7b9b2d59aa47238f4a22d094748e6c582a3358badae3362f0565ffc2b2978949",
+   "tournament.mjs": "0af66c54d8ff4f64f95f15bb7c22f3b870830aec40693abb50581165536ee323",
    "tests/conformance.test.mjs": "2f9d456bc93f14d75cc2450da771fd06c7af363e9d128302367cb8340a4ceb4f",
    "tests/learners.test.mjs": "062b097a952cc8a00d38fb1f0c683bf96b1b83d3b673e529b26ef8c74d4f109d",
    "package.json": "11eac33cf2cbb044cb4ecb3647ba1cd6d639c25e0b98057c9e515c8582f07c1d",
