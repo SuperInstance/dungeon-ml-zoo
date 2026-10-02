@@ -1,0 +1,59 @@
+{
+ "capturedFrom": "SuperInstance/quilt-dungeons@5b99bb331f1e1ba3ff0f79cf75179d69932505f3 via src/runner.mjs CLI",
+ "runs": [
+  {
+   "script": "greedy-loot",
+   "seed": 1,
+   "score": 30,
+   "trajHash": "e4bd967b2b1c4fd698f466fa07e19149da74489063584a5685f701d6dc807bd5"
+  },
+  {
+   "script": "greedy-loot",
+   "seed": 2,
+   "score": 5.699999999999999,
+   "trajHash": "21fc71268ac7c37ef5122e373add3cf0844dfa8dbfbd0addcaf3ef20a7e99058"
+  },
+  {
+   "script": "greedy-loot",
+   "seed": 3,
+   "score": 20,
+   "trajHash": "ca8b28f32d5491b391a740d886426f7caf006041847922f9804461a6b5f8049b"
+  },
+  {
+   "script": "survivor",
+   "seed": 1,
+   "score": 30,
+   "trajHash": "028aade17b76ec71011143854045c2d5801f4434789a9910f27838e93025a0cc"
+  },
+  {
+   "script": "survivor",
+   "seed": 2,
+   "score": 20,
+   "trajHash": "cbf7c13e95d842846d956e14d6690c1b34bf584d1b47043b911405246ad74823"
+  },
+  {
+   "script": "survivor",
+   "seed": 3,
+   "score": 20,
+   "trajHash": "5ad464df0f2492372c0bb4759b3e33a4ec80993925e9207d85af5652f82a2c64"
+  },
+  {
+   "script": "hunter",
+   "seed": 1,
+   "score": 30,
+   "trajHash": "f869bbdc2dff0e9d62f0a8d43fbc4226e1ab185b50c37734e3e48531f1d2b2d6"
+  },
+  {
+   "script": "hunter",
+   "seed": 2,
+   "score": 51,
+   "trajHash": "0d7ea28867f9a80fa417711971fcccdf424e0f6bc395dcc79d9b045b25c9baa7"
+  },
+  {
+   "script": "hunter",
+   "seed": 3,
+   "score": 20,
+   "trajHash": "a76d492951a768dd37c24fb08cb09c3717391393db24f34605b8597196d41bc1"
+  }
+ ]
+}

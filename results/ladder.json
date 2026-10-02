@@ -1,0 +1,42 @@
+{
+ "bar0": {
+  "name": "hunter",
+  "trainMean": 49.55
+ },
+ "rungs": [
+  {
+   "rung": 1,
+   "learner": "q-table",
+   "trainMean": 22.05,
+   "sparredAgainst": "hunter",
+   "vsMean": 49.55,
+   "beat": false
+  },
+  {
+   "rung": 2,
+   "learner": "tiny-nn",
+   "trainMean": 11.83,
+   "sparredAgainst": "hunter",
+   "vsMean": 49.55,
+   "beat": false
+  },
+  {
+   "rung": 3,
+   "learner": "ga-params",
+   "trainMean": 11.93,
+   "sparredAgainst": "hunter",
+   "vsMean": 49.55,
+   "beat": false
+  },
+  {
+   "rung": 4,
+   "learner": "memory-walker",
+   "trainMean": 150.07,
+   "sparredAgainst": "hunter",
+   "vsMean": 49.55,
+   "beat": true
+  }
+ ],
+ "champion": "memory-walker",
+ "championTrainMean": 150.07
+}

@@ -1,0 +1,78 @@
+{
+ "prereg": "preregister@1",
+ "wave": "73-d-r2",
+ "discipline": "dungeon-ml-zoo — five learners + memory-walker, one tournament in SuperInstance/quilt-dungeons. Claims sealed BEFORE the eval tournament runs; tournament.mjs verifies seal + battery fail-closed before stepping the engine.",
+ "battery": {
+  "algorithm": "sha256 over the exact file bytes bound at seal time; tournament.mjs re-derives and refuses to run on drift",
+  "files": {
+   "core/engine.mjs": "8003f2e2089a199994cba96a917c4902c4016150862c6a74ec80c16cdbdd7609",
+   "core/util.mjs": "20b01c12ca01a504b285495e2ef72658fcefa9faa0a1b1931f3d07afed846443",
+   "core/runner.mjs": "e29312ae41e7574463fbe323613f6cd636ac6ef493a48e6da9769be4730760b1",
+   "core/scoreboard.mjs": "4388b08c3dbc0ddb076e11d167b0609bf9b21869f1a5300fd0c19685c3c5ade8",
+   "core/scripts/greedy-loot.js": "36969e38e7e87bf611919b79e63ee3cf475fb3f9b1d560403d2551ca6bcca582",
+   "core/scripts/survivor.js": "966071ba5ccfd4da20691781a028466980d11c1a9d5e13ce431858e66e269617",
+   "core/scripts/hunter.js": "e4b2816f1bafbbe3e93894ac72d4f1fed39d7262234f8920a5038845536691a0",
+   "learners/q-table.js": "8dd53cc08cae30b55e8fbc6abceae6d8b7045f59bdfcf78db689245e893db5a3",
+   "learners/qtable-weights.json": "23b9b702808f0568cd014ad503ff93538462486698ef58a536f98a0e976f4cf1",
+   "learners/tiny-nn.js": "4a843cae76fdf1974d5532558296ab6a0af40de504665a866e8a7401b06cd5ac",
+   "learners/tinynn-weights.json": "d855f8a5f87a423dbb1842c571b84a96deb0a750efc8ea5a25914ff71ba2e1e9",
+   "learners/bandit.js": "de6d98b1ad30c5166cead14345d451905a672e0bd411b54918d56094639906a8",
+   "learners/bandit-params.json": "b85e1efdd2fcfee99e4d86afce5f5325b0ea6a3e7aa80628c09b9455244fb5ff",
+   "learners/ga-params.js": "fbfb2bd7afd103f3ff83017cd0ea9121386c90f8a3d9fb238f8c8ff5d48bb920",
+   "learners/gaparams-weights.json": "f3b910ffc82d324f67412e9132e4e99f04d7f6736bc9ba754b6b9a54ff2e06cc",
+   "learners/memory-walker.js": "586eb138f6b4d346db628365d4d133f8b4daacf1f028fc145e687041660707a4",
+   "learners/ladder.js": "6e40e0f87008f2a22a7589bc0a3bc0948e142e009c064e09f736485251b6d0d2",
+   "scripts/random-policy.js": "1d7bf901caf039ccf038470d13606a419293117b0f038e7b008fa7d29d1df7f7",
+   "tools/common.mjs": "2c9377bd1e0ddbff89283755dbd22873bc7645fc4a1f29f90da8f9c71bfb6cf9",
+   "tools/train-q-table.mjs": "9edd90087b8528a7fd3f9fb0261471a6c6ccc0e6fe2dd2f67e2c8b521e63bfcc",
+   "tools/train-tiny-nn.mjs": "a042f264b6222218d7874d19ad04b9d1e52e48ab50bfdd531f373a342344d37a",
+   "tools/train-bandit.mjs": "e82394fdfb07dd464d477908e144fe1a19537a2d23fd862a278884c5439abe0e",
+   "tools/train-ga.mjs": "29073ec2fa4c36356cfab8c058181c9b6c753c5f0e6adaa3abbbad06b1300262",
+   "tools/run-ladder.mjs": "75f92471ecaea865dd5dad549337bf27422bb5a1e90ca220122e973182340cc7",
+   "tools/preregister.mjs": "4a7c57980e8d5b7544ae09ff9156f96802af9e549482df95da34772f36890138",
+   "tournament.mjs": "7b9b2d59aa47238f4a22d094748e6c582a3358badae3362f0565ffc2b2978949",
+   "tests/conformance.test.mjs": "2f9d456bc93f14d75cc2450da771fd06c7af363e9d128302367cb8340a4ceb4f",
+   "tests/learners.test.mjs": "062b097a952cc8a00d38fb1f0c683bf96b1b83d3b673e529b26ef8c74d4f109d",
+   "package.json": "11eac33cf2cbb044cb4ecb3647ba1cd6d639c25e0b98057c9e515c8582f07c1d",
+   "README.md": "ca2770fc0e280351b2816f0f63ca62348f14ef069c776234f90e907686ed8c56",
+   "results/upstream-hashes.json": "148199fc8c3ae89786aaa4bd7346668925d0d25ab0e0ba3e7bbe5da4285833d3",
+   "results/train-scores.jsonl": "4d9f809b59c2352d0f358c30692102a45fa5b1628506e718519cc140c1625d13",
+   "results/bandit-pulls.jsonl": "4d1776139702b1d4ea17691867dc34ae98523afc019530bd1022aff9d8b0a2e0",
+   "results/ladder.json": "e07327f455a486f88b2451d57c749dd7e1f25204004e4c37153c44c85386d021"
+  }
+ },
+ "claims": [
+  {
+   "id": "P1",
+   "claim": "ga-params (GA over the parametric baseline, pop 12 x 8 gens, fitness = MEAN SCORE ON EVAL SEEDS 101-108 — the mission-specified leak, disclosed) has mean eval score >= q-table mean eval score on the same eval seeds, in the official tournament receipts.",
+   "metric": "P1.gaMinusQtable",
+   "op": "gte",
+   "threshold": 0,
+   "refusal": "FAIL means even a GA fitted directly on the eval seeds could not beat the 64-state tabular learner there — the strongest possible indictment of this GA parameterization; PASS must be read against the disclosed fitness leak (the GA saw these seeds during evolution, the q-table never did)."
+  },
+  {
+   "id": "P2",
+   "claim": "The contextual bandit script-selector (12 contexts: phase x hp-band; 5 arms trained on 100 pre-registered pulls over seeds 1-20) beats always-hunter script-choice: mean eval score on seeds 101-108 strictly >= hunter mean.",
+   "metric": "P2.banditMinusHunter",
+   "op": "gte",
+   "threshold": 0,
+   "refusal": "FAIL means per-phase script switching added nothing over always-hunter at this context granularity and pull budget."
+  },
+  {
+   "id": "P3",
+   "claim": "tiny-nn (2-layer MLP, behavioral cloning from q-table eval-seed trajectories + 3 online fine-tune episodes) outscores the random-policy reference on >= 7 of the 8 eval seeds.",
+   "metric": "P3.tinynnBeatsRandomSeeds",
+   "op": "gte",
+   "threshold": 7,
+   "refusal": "FAIL means the cloned MLP does not reliably clear a uniform random walker — BC from 8 trajectories did not transfer to a policy."
+  },
+  {
+   "id": "P4",
+   "claim": "memory-walker (scripted spatial-memory frontier explorer, NOT a learner) reaches the exit (won=true) on >= 3 of the 8 eval seeds — the first exit wins anywhere in the fleet dungeon records (0/24 upstream baseline runs ever reached it).",
+   "metric": "P4.memoryWalkerWins",
+   "op": "gte",
+   "threshold": 3,
+   "refusal": "FAIL means exploration memory alone does not reach the exit within 200 turns on these maps often enough, and the 200-pt win bonus stays marginal for scripted agents; the exact win count is receipted either way."
+  }
+ ]
+}

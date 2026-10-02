@@ -1,0 +1,13 @@
+{
+  "name": "dungeon-ml-zoo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "The ML zoo: five learners + a memory-walker challenging each other in SuperInstance/quilt-dungeons. Zero model calls, stdlib only, sealed predictions.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "train": "node tools/train-q-table.mjs && node tools/train-tiny-nn.mjs && node tools/train-bandit.mjs && node tools/train-ga.mjs && node tools/run-ladder.mjs",
+    "tournament": "node tournament.mjs"
+  }
+}

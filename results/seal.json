@@ -1,0 +1,7 @@
+{
+  "tool": "preregister@1",
+  "sealedAt": "2026-10-02T22:38:23.872Z",
+  "claimsHash": "sha256:b1ceb8c9db58a8df5aab2194074facf8cd653c3f86242af9e2bcd136318629eb",
+  "claimsPath": "claims.json",
+  "note": "73-d-r2 zoo: sealed before the eval tournament; battery binds every source+artifact the tournament loads"
+}
